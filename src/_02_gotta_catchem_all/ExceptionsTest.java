@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 
+
+
 class ExceptionsTest {
 	ExceptionMethods em = new ExceptionMethods();
 	
@@ -32,7 +34,18 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
-		
+		try {
+			assertEquals(5.0, ExceptionMethods.divide(45.0, 9.0));
+		} catch (CustomException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			assertEquals(null, ExceptionMethods.divide(45.0, 0.0));
+		} catch (CustomException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
@@ -42,7 +55,13 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
-		
+		try {
+			assertEquals(5.0, ExceptionMethods.divide(45.0, 9.0));
+		} catch (CustomException e) {
+			// TODO Auto-generated catch block
+			assertEquals("dmubelbmuy",e.reverseString("yumbledumb"));
+			e.printStackTrace();
+		}
 	}
 	
 	
