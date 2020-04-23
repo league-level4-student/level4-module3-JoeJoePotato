@@ -55,13 +55,9 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
-		try {
-			assertEquals(5.0, ExceptionMethods.divide(45.0, 9.0));
-		} catch (CustomException e) {
-			// TODO Auto-generated catch block
-			assertEquals("dmubelbmuy",e.reverseString("yumbledumb"));
-			e.printStackTrace();
-		}
+		assertEquals("teey teey teey", CustomException.reverseString("yeet yeet yeet"));
+		assertEquals("teey teey teey", CustomException.reverseString());
+
 	}
 	
 	
