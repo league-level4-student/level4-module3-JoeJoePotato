@@ -7,4 +7,14 @@ public class ExceptionMethods {
 		}
 		return a/b;
 	}
+	public static String reverseString(String s) {
+		String zarg="";
+		if(s==zarg) {
+			throw new IllegalStateException();
+		}
+		for (int i = 0; i < s.length(); i++) {
+			zarg=zarg+s.charAt(s.length()-(i+1));
+		}
+		return zarg;
+	}
 }
